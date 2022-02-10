@@ -1,4 +1,7 @@
+import 'package:first_app/nombre.dart';
 import 'package:flutter/material.dart';
+import './saludo.dart';
+import './primersaludo.dart';
 
 void main() => runApp(MyApp());
 
@@ -6,11 +9,11 @@ class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> {
   var indiceNormal = 0;
 
   void otroTexto() {
@@ -39,8 +42,8 @@ class MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text('Esto es una prueba más pequeña'),
-            Text(
+            PrimerTexto(),
+            Saludo(
               saludos[indiceNormal],
             ),
             ElevatedButton(
@@ -51,6 +54,7 @@ class MyAppState extends State<MyApp> {
               onPressed: null,
               child: Text('Segundo Hola'),
             ),
+            Nombre(),
           ],
         ),
       ),
