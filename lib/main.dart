@@ -2,6 +2,7 @@ import 'package:first_app/nombre.dart';
 import 'package:flutter/material.dart';
 import './saludo.dart';
 import './primersaludo.dart';
+import './btnsaludo.dart';
 
 void main() => runApp(MyApp());
 
@@ -38,7 +39,13 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Una prueba'),
+          backgroundColor: Colors.indigo.shade900,
+          title: Text(
+            'LOGIN',
+            style: TextStyle(
+              fontWeight: FontWeight.w800,
+            ),
+          ),
         ),
         body: Column(
           children: [
@@ -46,10 +53,7 @@ class _MyAppState extends State<MyApp> {
             Saludo(
               saludos[indiceNormal],
             ),
-            ElevatedButton(
-              onPressed: otroTexto,
-              child: Text('Hola'),
-            ),
+            Boton(otroTexto),
             ElevatedButton(
               onPressed: null,
               child: Text('Segundo Hola'),
