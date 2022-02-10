@@ -21,6 +21,7 @@ class Boton extends StatelessWidget {
             'Hola',
             style: TextStyle(
               fontSize: 20,
+              color: Colors.amber,
             ),
           )),
     );
