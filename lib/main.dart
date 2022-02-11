@@ -16,26 +16,33 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var indiceNormal = 0;
+  var pulsaBoton = 0;
+  var saludos = [
+    'Hola',
+    '¿Cómo estás?',
+    'Solo quiero hablar contigo un rato',
+    '¿Por qué me ignoras?',
+    'Ah...',
+    'Es cierto que no puedes responder aún',
+    'Bueno, entonces te dejaré avanzar',
+    'Pero solo porque no tienes opciones',
+  ];
 
   void otroTexto() {
     setState(() {});
-    if (indiceNormal < 2) {
+    if (indiceNormal < saludos.length - 1) {
       indiceNormal++;
+      pulsaBoton += 1;
       print(indiceNormal);
     } else {
       indiceNormal = 0;
       print(indiceNormal);
+      pulsaBoton += 1;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    var saludos = [
-      'Buenos días',
-      'Buenas tardes',
-      'Buenas noches',
-    ];
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(

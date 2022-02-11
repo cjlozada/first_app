@@ -12,16 +12,14 @@ class Boton extends StatelessWidget {
     return Container(
       margin: EdgeInsets.fromLTRB(30, 0, 30, 0),
       width: double.infinity,
-      child: ElevatedButton(
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.indigo.shade900),
-          ),
+      child: OutlinedButton(
+          style: OutlinedButton.styleFrom(primary: Colors.amber),
           onPressed: selectHandler,
           child: Text(
             'Hola',
             style: TextStyle(
               fontSize: 20,
-              color: Colors.amber,
+              color: Colors.indigo.shade900,
             ),
           )),
     );
